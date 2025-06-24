@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "GitHub Code Explainer",
+  "version": "1.0",
+  "description": "Select code on GitHub, ask a question, and get an explanation from Gemini.",
+  "permissions": [
+    "scripting",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://generativelanguage.googleapis.com/"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/*"],
+      "css": ["styles.css"],
+      "js": ["marked.min.js", "content.js"]
+    }
+  ],
+  "action": {
+    "default_title": "GitHub Code Explainer"
+  },
+  "icons": {
+    "16": "https://placehold.co/16x16/7C3AED/FFFFFF?text=G",
+    "48": "https://placehold.co/48x48/7C3AED/FFFFFF?text=G",
+    "128": "https://placehold.co/128x128/7C3AED/FFFFFF?text=G"
+  }
+}
+
